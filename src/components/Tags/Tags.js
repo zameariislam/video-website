@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchTags } from '../../features/tags/tagsSlice';
-import Loading from '../../ui/Loading';
+
 import Tag from './Tag';
 
 const Tags = () => {
-    const { tags, isLoading } = useSelector((state) => state.tags)
+    const { tags} = useSelector((state) => state.tags)
     const dispatch = useDispatch()
 
 
