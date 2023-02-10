@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchVideos } from '../../features/Videos/VideosSlice';
 import VideoGridItem from './VideoGridItem';
 
 const VideoGrid = () => {
+
+    const videos = useSelector(state => state.videos)
+    console.log(videos)
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(fetchVideos())
+
+    }, [])
+
+
     return (
         <section className="pt-12">
             <section className="pt-12">
