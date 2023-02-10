@@ -8,7 +8,7 @@ const RelatedVideos = ({ id, tags }) => {
 
     const {relatedVideos,isLoading,isError,error} = useSelector(state => state.relatedVideos)
     const dispatch = useDispatch()
-    console.log('tags',tags)
+    
 
     useEffect(() => {
         dispatch(fetchRelatedVideos({ id, tags }))
